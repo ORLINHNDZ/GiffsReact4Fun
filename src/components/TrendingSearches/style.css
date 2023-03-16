@@ -1,0 +1,13 @@
+
+.trendingTrends {
+color: white;
+display: grid;
+grid-template-columns: 100%;
+}
+
+h1{
+  color: white;
+}
+h3 {
+  color: white;
+}

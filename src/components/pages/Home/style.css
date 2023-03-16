@@ -1,0 +1,33 @@
+.center-content {
+  list-style-position: inside;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  color: white;
+}
+
+.trending {
+column-count: 3;
+color: white;
+}
+
+h1{
+  color: white;
+}
+h3 {
+  color: white;
+}
+ol {
+  color: white;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  justify-content: center;
+}
+
+.categoryInputs {
+  color: white;
+}

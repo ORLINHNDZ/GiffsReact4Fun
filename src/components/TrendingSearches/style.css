@@ -2,7 +2,7 @@
 .trendingTrends {
 color: white;
 display: grid;
-grid-template-columns: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 h1{
@@ -10,4 +10,10 @@ h1{
 }
 h3 {
   color: white;
+}
+
+@media (min-width: 300px){
+  .trendingTrends {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr) );
+  }
 }

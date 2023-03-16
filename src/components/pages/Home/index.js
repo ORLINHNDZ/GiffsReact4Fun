@@ -26,25 +26,25 @@ export default function Home () {
     }
     return (
         <div>
-            <form onSubmit={handleSubmit}>
+            <form className="example" onSubmit={handleSubmit}>
                 <input placeholder="Search for a Gif..." onChange={handleChange} type='text' value={keyword} /> 
-                <button>Buscar</button>
+                <button>Search</button>
             </form>
             <h3>Top Animes Represented by consuming a Gif's API</h3>
 
-            <ul className="center-content">
+            {/* <ul className="center-content">
                 {POPULAR_GIFS.map((popularGif) => (
                     <ol key={popularGif}>
                         <Link to = {`/gif/${popularGif}`}>{popularGif}</Link>
                     </ol>
                 ))}
-            </ul>
+            </ul> */}
             <h3>Popular Categories</h3>
             <div className="categoryInputs">
                 <Category options={POPULAR_GIFS}/>
             </div>
             
-            <h3 className="center-content"> Ultima busqueda</h3>
+            <h3 className="center-content"> Your Last Search </h3>
             <ListOfGifs gifs={gifs}/>
             <TrendingSearches className='trending'/>
         </div>

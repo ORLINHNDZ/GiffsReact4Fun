@@ -19,7 +19,7 @@ function App() {
     }>
     <div className="App">
       <section className="App-content">
-        <h1>App</h1>
+        <h1>Awesome Giff React App</h1>
         <GifsContextProvider>
         <Route component={Home} path="/" />
         <Route component={Detail} path="/gif/:id" />

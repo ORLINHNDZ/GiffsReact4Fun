@@ -10,7 +10,7 @@ const POPULAR_GIFS = ["Attack of Titans", "Kimetsu", "Naruto", "Boku No Hero", "
 export default function Home () {
     const [keyword, SetKeyword] = useState('')
     const [path, SetPath] = useLocation()
-    const {loading, gifs} = useGifs()
+    const {gifs} = useGifs()
     
     
 

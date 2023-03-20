@@ -3,9 +3,9 @@ import getGifs from "../services/getGifs";
 import  GifsContext  from "../context/GifsContext";
 
 const INITIAL_PAGE = 0
-export function useGifs ({ keyword  } =  {keyword : null}) {
+export function useGifs ({ keyword  } =  {keyword : localStorage.getItem('lastKeyword') || 'random' } ) {
     const [loading, setLoading] = useState(false);
-    const [loadinNextPage, setLaodingNextPage] = useState(false)
+    const [loadingNextPage, setLaodingNextPage] = useState(false)
     const [page, setPage] = useState(INITIAL_PAGE)
     const {gifs, setGifs} = useContext(GifsContext)
 
@@ -23,6 +23,7 @@ export function useGifs ({ keyword  } =  {keyword : null}) {
             setLoading(false)
         localStorage.setItem('lastKeyword', keyword)
         })
+        console.log(keywordToUse)
     }, [keyword, keywordToUse, setGifs])
 
     useEffect(function () {
@@ -35,5 +36,5 @@ export function useGifs ({ keyword  } =  {keyword : null}) {
         })
     }, [keywordToUse, page])
 
-    return {loading, loadinNextPage, gifs, setPage}
+    return {loading, loadingNextPage, gifs, setPage}
 }

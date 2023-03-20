@@ -13,7 +13,6 @@ export default function Detail ({params}){
     console.log(gif)
 
     return <div>
-        <Gif {...gif}
-        />
+        <Gif {...gifs} />
         </div>
 }

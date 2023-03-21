@@ -5,6 +5,7 @@ import ListOfGifs from "../../ListOfGifs";
 import Category from "../../Category";
 import './style.css'
 import TrendingSearches from "../../TrendingSearches";
+import { Helmet } from "react-helmet";
 const POPULAR_GIFS = ["Attack of Titans", "Kimetsu", "Naruto", "Boku No Hero", "Spy Family"]
 
 export default function Home () {
@@ -26,6 +27,9 @@ export default function Home () {
     }
     return (
         <div>
+            <Helmet>
+                <title>Home | Giff</title>
+            </Helmet>
             <form className="example" onSubmit={handleSubmit}>
                 <input placeholder="Search for a Gif..." onChange={handleChange} type='text' value={keyword} /> 
                 <button>Search</button>

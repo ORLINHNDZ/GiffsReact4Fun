@@ -3,6 +3,8 @@ import ListOfGifs from 'components/ListOfGifs';
 import {useGifs} from 'hooks/useGifs';
 import useNearScreen from 'hooks/useNearScreen';
 import debounce from 'just-debounce-it';
+import useTitle from 'hooks/useSEO';
+import { Helmet } from 'react-helmet';
 export default function SearchResults({ params }) {
     
     const {keyword} = params
@@ -14,7 +16,8 @@ export default function SearchResults({ params }) {
             once: false
         })
     
-    console.log(isNearScreen)
+    const title = gifs ? `${gifs.length} resultados de ${keyword}` : ''
+    useTitle({title})
     //const handleNextPage = () => console.log('next page')
     
     const debounceHandleNextPage = useCallback(debounce(
@@ -30,6 +33,10 @@ export default function SearchResults({ params }) {
         {loading 
             ? <h1>Cargando...</h1> 
             : <>
+            <Helmet>
+                <title>{title}</title>
+                <meta name="description" content={title}></meta>
+            </Helmet>
             <h3>{decodeURI(keyword)}</h3>
             <ListOfGifs gifs ={gifs} />
             <div id='visor' ref={externalRef}></div>

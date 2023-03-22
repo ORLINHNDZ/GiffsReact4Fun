@@ -10,9 +10,6 @@ export default function Detail ({params}){
     
     if (isLoading) {
         return <>
-        <Helmet>
-            <title>Cargando....</title>
-        </Helmet>
         <h1>Cargando...</h1>
         </>  
     }

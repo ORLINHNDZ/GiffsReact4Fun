@@ -1,9 +1,12 @@
 
 .trendingTrends {
 color: white;
-display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
 }
+.columns{
+  column-count: 2;
+  column-gap: 0px;
+}
+
 
 h1{
   color: white;

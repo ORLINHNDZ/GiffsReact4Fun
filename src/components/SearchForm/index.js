@@ -35,7 +35,7 @@ export default function SearchForm({
     return (
         <>
             <form onSubmit={handleSubmit} className={css["c-search"]}>
-                <button>Search</button>
+                <button className={css["button-search"]}>Search</button>
                 <input
                     className={css["c-search-input"]}
                     placeholder="Search a gif here..."

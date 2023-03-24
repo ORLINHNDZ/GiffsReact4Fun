@@ -10,8 +10,11 @@ export default function TrendingSearches (){
         getTrendingTerms().then(setTrends)
     }, [])
 
-    return <div className="trendingTrends">
-        <Category name='Trends' options={trends}/>
+    return <div className="columns">
+        <div className="trendingTrends">
+        <Category options={trends}/>
         </div>
+    </div>
+    
 }
 

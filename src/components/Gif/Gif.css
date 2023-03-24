@@ -16,6 +16,7 @@ img {
 
 .Gif {
     margin-bottom: 0;
+    position: relative;
   }
 
 .Gif-link {
@@ -24,6 +25,12 @@ img {
     text-decoration: none;
     position: relative;
     width: 100%;
+  }
+.Gif-buttons {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 1;
   }
 
 h4 {

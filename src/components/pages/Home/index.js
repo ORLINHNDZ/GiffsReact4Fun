@@ -20,14 +20,15 @@ export default function Home () {
            <header>
             <SearchForm/>
            </header>
-            <h3>Top Animes Represented by consuming a Gif's API</h3>
-            <h3>Popular Categories</h3>
+    
+            <h3>Popular Anime Categories</h3>
             <div className="categoryInputs">
                 <Category options={POPULAR_GIFS}/>
             </div>
             
             <h3 className="center-content"> Your Last Search </h3>
             <ListOfGifs gifs={gifs}/>
+            <h3 className="center-content">Trends</h3>
             <TrendingSearches className='trending'/>
         </div>
     )

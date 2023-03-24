@@ -1,7 +1,7 @@
 .center-content {
   list-style-position: inside;
   flex-wrap: wrap;
-  padding: 0;
+  padding: 40px;
   margin: 0;
   justify-content: center;
   color: white;
@@ -35,17 +35,7 @@ a {
 /* Style the search field */
 
 
-/* Button */
-button {
-  background-color: #2167e7; /* Green */
-  border: none;
-  color: white;
-  padding: 5px 32px;
-  text-decoration: none;
-  display: inline-block;
-  margin: 0px 0px;
-  font-size: 15px;
-}
+
 
 @media (min-width: 300px){
   button {

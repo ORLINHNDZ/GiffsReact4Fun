@@ -3,9 +3,12 @@ import React, { useState } from "react";
 const Context = React.createContext({})
 
 export function UserContextProvider ({children}) {
-    const [jwt, setJwt] = useState(null)
+    const [favs, setFavs] = useState([])
+    const [jwt, setJwt] = useState(
+        () => window.sessionStorage.getItem('jwt')
+    )
 
-    return <Context.Provider value={{jwt, setJwt}}>
+    return <Context.Provider value={{jwt, setJwt, favs, setFavs}}>
         {children}
     </Context.Provider>
 }

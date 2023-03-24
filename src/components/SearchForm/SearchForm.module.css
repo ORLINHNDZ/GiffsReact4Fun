@@ -30,5 +30,11 @@
   .c-search-input {
     font-size: 16px;
     border: none;
-    padding: 4px 16px;
+    padding: 3px 2px;
+  }
+  select {
+    width: 5%;
+    font-size: 24px;
+    border: none;
+    padding: 3px 2px;
   }

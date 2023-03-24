@@ -44,7 +44,7 @@ export default function SearchForm({
                     value={keyword}
                 />
                 <select  onChange={handleChangeRating} value={rating}>
-                    <option disabled>Rating Type</option>
+                    <option className="c-option" disabled>Rating Type</option>
                     {RATINGS.map(rating => <option key={rating}>{rating}</option>)}
                 </select>
                 
